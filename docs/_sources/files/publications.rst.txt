@@ -11,28 +11,28 @@
 
 国際発表
 ---------------
-- **Ueno, K., & Miura, H. (2023):**
+- **Ueno, K., & Miura, H.:**
   
   Preliminary validation of the applicability of the multigrid method to multi-scale representation of fluids,
 
   NTU-UTokyo 2nd Workshop, 
   Taipei, Taiwan, 2-4 March (2 March) 2023, oral.
 
-- **Ueno, K., & Miura, H. (2023):**
+- **Ueno, K., & Miura, H.:**
   
   Preliminary validation of the applicability of the multigrid method to multi-scale representation of fluids,
 
   Japan Geoscience Union Meeting 2023,
   Chiba, Japan, 21-26 May (26 May) 2023, oral.
 
-- **Ueno, K., & Miura, H. (2024):**
+- **Ueno, K., & Miura, H.:**
   
   Application of Quantum Computing for Cloud Ensemble Representation,
 
   Japan Geoscience Union Meeting 2024,
   Chiba, Japan, 26-31 May (29 May) 2024, poster, invited.
 
-- **Ueno, K., & Miura, H. (2024):**
+- **Ueno, K., & Miura, H.:**
 
   A Quantum Algorithm for Cloud Collision-Coalescence Calculation,
 
