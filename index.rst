@@ -6,6 +6,8 @@
 Home
 ===================================
 
+| `English <en/index.html>`_
+
 .. toctree::
    :maxdepth: 2
 
@@ -14,8 +16,19 @@ Home
    ./files/publications
    ./files/others
 
+.. toctree::
+   :hidden:
+
+   ./en/index
+   ./en/about
+   ./en/research
+   ./en/publications
+   ./en/others
+
 お知らせ
 ==============
+2026.03.04 ホームページを更新しました。
+
 2024.05.01 ホームページを更新しました。
 
 2024.02.23 ホームページを開設しました。
