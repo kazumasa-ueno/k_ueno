@@ -1,248 +1,320 @@
 <!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>上野和雅 | Kazumasa Ueno</title>
+  <meta name="description" content="上野和雅 — 東京大学大学院 地球惑星科学専攻 博士課程。大気科学における量子コンピュータの活用を研究しています。" />
+  <meta name="author" content="Kazumasa Ueno" />
+  <meta name="color-scheme" content="light dark" />
 
-<html lang="ja" data-content_root="./">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="上野和雅 | Kazumasa Ueno" />
+  <meta property="og:description" content="大気科学における量子コンピュータの活用に関する研究 — 東京大学 地球惑星科学専攻 博士課程" />
 
-    <title>Home &#8212; 上野和雅（Kazumasa Ueno）</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-    <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=9b2032db" />
-    <script src="_static/documentation_options.js?v=c033477b"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/translations.js?v=91613774"></script>
-    <script src="_static/js/theme.js"></script>
-    <script src="_static/js/petite-vue.js"></script>
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="自己紹介" href="files/about.html" /> 
-  </head><body data-dark_mode_code_blocks="true">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div id="top_nav">
-    
-
-    <nav>
-        
-            
-        
-
-        <p id="toggle_sidebar">
-            <a href="#" title="Toggle sidebar">|||</a>
-        </p>
-        <h1><a href="#" title="Go to homepage">上野和雅（Kazumasa Ueno）</a></h1>
-
-        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
-    <template v-if="mode == 'light'">
-        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
-    </template>
-
-    <template v-if="mode == 'dark'">
-        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
-    </template>
-
-    <template v-if="mode == 'darkest'">
-        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
-    </template>
-</a>
-
-<script>
-(function() {
-    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
-
-    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
-
-    if (initialMode) {
-        // Make sure the value in local storage is valid
-        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
-            initialMode = 'light'
-            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
-        }
-    } else {
-        // Check if the client prefers dark mode
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            initialMode = 'dark'
-        } else {
-            initialMode = 'light'
-        }
-        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
-    }
-
-    document.documentElement.dataset.mode = initialMode
-
-    PetiteVue.createApp({
-        'mode': initialMode,
-        handleClick() {
-            let currentMode = this.mode
-
-            if (currentMode == 'light') {
-                this.mode = 'dark'
-            } else if (currentMode == 'dark') {
-                this.mode = 'darkest'
-            } else if (currentMode == 'darkest') {
-                this.mode = 'light'
-            }
-
-            document.documentElement.dataset.mode = this.mode
-            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
-
-            console.log(this.mode)
-        }
-    }).mount('#mode_toggle')
-})()
-</script>
-            <p class="mobile_search_link">
-                <a href="search.html" title="Search">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
-                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
-                    </svg>
-                </a>
-            </p>
-        
-
-        <div class="searchbox_wrapper">
-            
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="検索" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+  <div class="layout">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <div class="profile">
+          <img class="avatar" src="assets/img/cloud_avatar.jpg" alt="Kazumasa Ueno" width="128" height="128" />
+          <h1 class="name">
+            <span class="lang-ja">上野 和雅</span>
+            <span class="lang-en">Kazumasa Ueno</span>
+          </h1>
+          <p class="name-sub">
+            <span class="lang-ja">Kazumasa Ueno</span>
+            <span class="lang-en">上野 和雅</span>
+          </p>
+          <p class="tagline">
+            <span class="lang-ja">大気科学 × 量子コンピュータ</span>
+            <span class="lang-en">Atmospheric Science × Quantum Computing</span>
+          </p>
+          <p class="affil-mini">
+            <span class="lang-ja">東京大学大学院 地球惑星科学専攻<br />三浦研究室 博士課程2年</span>
+            <span class="lang-en">Dept. of Earth &amp; Planetary Science,<br />The University of Tokyo — Miura Lab, D2</span>
+          </p>
         </div>
-    </nav>
-</div>
 
-    
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper"><ul>
-<li class="toctree-l1"><a class="reference internal" href="files/about.html">自己紹介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files/research.html">研究テーマ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files/publications.html">論文・学会発表</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files/others.html">その他</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="en/index.html">Home</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en/index.html#news">News</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en/about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en/research.html">Research</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en/publications.html">Publications &amp; Presentations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en/others.html">Others</a></li>
-</ul>
+        <nav class="nav" aria-label="Section navigation">
+          <a href="#news" class="nav-link">
+            <span class="lang-ja">お知らせ</span><span class="lang-en">News</span>
+          </a>
+          <a href="#about" class="nav-link">
+            <span class="lang-ja">自己紹介</span><span class="lang-en">About</span>
+          </a>
+          <a href="#research" class="nav-link">
+            <span class="lang-ja">研究テーマ</span><span class="lang-en">Research</span>
+          </a>
+          <a href="#publications" class="nav-link">
+            <span class="lang-ja">論文</span><span class="lang-en">Publications</span>
+          </a>
+          <a href="#links" class="nav-link">
+            <span class="lang-ja">リンク</span><span class="lang-en">Links</span>
+          </a>
+        </nav>
 
+        <div class="contact-mini">
+          <a class="contact-row email-link" data-user="kazumasa-e67" data-domain="eps.s.u-tokyo.ac.jp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.4l8 5 8-5V6H4zm16 2.5-8 5-8-5V18h16V8.5z"/></svg>
+            <span class="email-text" data-keep>Email</span>
+          </a>
+          <span class="contact-row">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            <span class="lang-ja">東京・本郷</span><span class="lang-en">Hongo, Tokyo</span>
+          </span>
+        </div>
+
+        <div class="social">
+          <a class="social-link" href="https://github.com/kazumasa-ueno" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/kazumasa-ueno-046364345/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a class="social-link" href="https://orcid.org/0009-0009-3122-0894" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+          </a>
+        </div>
+
+        <div class="controls">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-set-lang="ja">日本語</button>
+            <button type="button" class="lang-btn" data-set-lang="en">EN</button>
+          </div>
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1zm0 14a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM4 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm14 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM6.3 6.3a1 1 0 0 1 1.4 0l.7.7a1 1 0 1 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4zm9.3 9.3a1 1 0 0 1 1.4 0l.7.7a1 1 0 1 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4zM17.7 6.3a1 1 0 0 1 0 1.4l-.7.7a1 1 0 1 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0zM8.4 15.6a1 1 0 0 1 0 1.4l-.7.7a1 1 0 0 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0z"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
         </div>
       </div>
+    </aside>
 
+    <!-- ===================== MAIN ===================== -->
+    <main class="main" id="main">
+      <header class="lead">
+        <p class="lang-ja">
+          東京大学大学院 理学系研究科 地球惑星科学専攻の博士課程に在籍しています。
+          <strong>大気科学分野における量子コンピュータの活用</strong>をテーマに、
+          確率的な雲モデルや雲粒の衝突併合過程、放射伝達などへの量子アルゴリズムの応用を研究しています。
+        </p>
+        <p class="lang-en">
+          I am a doctoral student at the Department of Earth and Planetary Science,
+          The University of Tokyo. My research explores
+          <strong>the application of quantum computing to atmospheric science</strong>,
+          including stochastic cloud models, cloud droplet collision–coalescence, and radiative transfer.
+        </p>
+      </header>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="home">
-<h1>Home<a class="headerlink" href="#home" title="Link to this heading">¶</a></h1>
-<div class="line-block">
-<div class="line"><a class="reference external" href="en/index.html">English</a></div>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="files/about.html">自己紹介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="files/about.html#id2">所属</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files/about.html#id3">経歴</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files/about.html#id4">フェローシップ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files/about.html#id5">受賞</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files/about.html#id8">連絡先</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="files/research.html">研究テーマ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files/publications.html">論文・学会発表</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="files/publications.html#id2">論文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files/publications.html#id3">国際発表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="files/publications.html#id4">国内発表</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="files/others.html">その他</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="files/others.html#id2">リンク</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</section>
-<section id="id1">
-<h1>お知らせ<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
-<dl class="field-list simple">
-<dt class="field-odd">2025.03.25<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.s.u-tokyo.ac.jp/ja/info/10714/">理学系研究科研究奨励賞（修士課程）</a> を受賞しました。</p>
-</dd>
-<dt class="field-even">2025.01.29<span class="colon">:</span></dt>
-<dd class="field-even"><p>論文「 <a class="reference external" href="https://doi.org/10.2151/sola.2025-006">Quantum Algorithm for a Stochastic Multicloud Model</a> 」が 日本気象学会の論文誌 The Scientific Online Letters on the Atmosphere (SOLA) に掲載されました。</p>
-</dd>
-<dt class="field-odd">2024.12.26<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.metsoc.jp/about/awards/matsuno">日本気象学会2024年秋季大会 松野賞</a> を受賞しました。</p>
-</dd>
-<dt class="field-even">2024.07.27<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.jpgu.org/ospa/2024meeting/#sectionA">日本地球惑星科学連合（JpGU）2024年大会 学生優秀発表賞</a> を受賞しました。</p>
-</dd>
-<dt class="field-odd">2024.05.01<span class="colon">:</span></dt>
-<dd class="field-odd"><p>ホームページを更新しました。</p>
-</dd>
-<dt class="field-even">2024.02.23<span class="colon">:</span></dt>
-<dd class="field-even"><p>ホームページを開設しました。</p>
-</dd>
-</dl>
-</section>
+      <!-- ===== NEWS ===== -->
+      <section id="news" class="section">
+        <h2 class="section-title"><span class="lang-ja">お知らせ</span><span class="lang-en">News</span></h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">2026.05.27</span>
+            <span class="news-body">
+              <span class="lang-ja">プレプリント「<a href="https://arxiv.org/abs/2605.28135" target="_blank" rel="noopener">A Demonstration of Quantum Circuit Implementation for Obstacle Flow Using Carleman-Linearized Lattice Boltzmann Method</a>」を arXiv に公開しました。</span>
+              <span class="lang-en">Preprint "<a href="https://arxiv.org/abs/2605.28135" target="_blank" rel="noopener">A Demonstration of Quantum Circuit Implementation for Obstacle Flow Using Carleman-Linearized Lattice Boltzmann Method</a>" posted on arXiv.</span>
+            </span>
+          </li>
+          <li>
+            <span class="news-date">2026.03.06</span>
+            <span class="news-body">
+              <span class="lang-ja">プレプリント「<a href="https://arxiv.org/abs/2603.06353" target="_blank" rel="noopener">Quantum algorithm for the collision-coalescence of cloud droplets</a>」を arXiv に公開しました。</span>
+              <span class="lang-en">Preprint "<a href="https://arxiv.org/abs/2603.06353" target="_blank" rel="noopener">Quantum algorithm for the collision-coalescence of cloud droplets</a>" posted on arXiv.</span>
+            </span>
+          </li>
+          <li>
+            <span class="news-date">2025.04.01</span>
+            <span class="news-body"><span class="lang-ja">博士課程に進学しました。</span><span class="lang-en">Updated the website.</span></span>
+          </li>
+          <li>
+            <span class="news-date">2025.01.29</span>
+            <span class="news-body">
+              <span class="lang-ja">論文「<a href="https://doi.org/10.2151/sola.2025-006" target="_blank" rel="noopener">Quantum Algorithm for a Stochastic Multicloud Model</a>」が 日本気象学会の論文誌 SOLA に掲載されました。</span>
+              <span class="lang-en">Paper "<a href="https://doi.org/10.2151/sola.2025-006" target="_blank" rel="noopener">Quantum Algorithm for a Stochastic Multicloud Model</a>" published in SOLA (Meteorological Society of Japan).</span>
+            </span>
+          </li>
+          <li>
+            <span class="news-date">2024.02.23</span>
+            <span class="news-body"><span class="lang-ja">ホームページを開設しました。</span><span class="lang-en">Launched the website.</span></span>
+          </li>
+        </ul>
+        <button type="button" class="show-more" id="newsToggle" aria-expanded="false" hidden>
+          <span class="lang-ja"></span><span class="lang-en"></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5 5.5 9 7 7.5l5 5 5-5L18.5 9z"/></svg>
+        </button>
+      </section>
 
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="section">
+        <h2 class="section-title"><span class="lang-ja">自己紹介</span><span class="lang-en">About</span></h2>
 
-            <div class="clearer"></div>
+        <div class="card">
+          <h3 class="sub"><span class="lang-ja">所属</span><span class="lang-en">Affiliation</span></h3>
+          <p class="lang-ja">
+            東京大学大学院 理学系研究科 地球惑星科学専攻<br />
+            大気海洋科学講座 三浦裕亮研究室<br />
+            <span class="badge">博士課程2年</span>
+          </p>
+          <p class="lang-en">
+            Department of Earth and Planetary Science, Graduate School of Science,<br />
+            The University of Tokyo — Atmosphere and Ocean Science Group, Miura Laboratory<br />
+            <span class="badge">Doctoral 2nd year (D2)</span>
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="sub"><span class="lang-ja">経歴</span><span class="lang-en">Education / Career</span></h3>
+            <ul class="timeline range lang-ja">
+              <li><span class="t-date">2019.04–2021.03</span> 東京大学 教養学部 理科Ⅰ類</li>
+              <li><span class="t-date">2021.04–2023.03</span> 東京大学 理学部 地球惑星物理学科</li>
+              <li><span class="t-date">2023.04–2025.03</span> 東京大学大学院 理学系研究科 地球惑星科学専攻 修士課程</li>
+              <li><span class="t-date">2025.04–現在</span> 同 博士課程</li>
+            </ul>
+            <ul class="timeline range lang-en">
+              <li><span class="t-date">2019.04–2021.03</span> Faculty of Science I, College of Arts and Sciences, UTokyo</li>
+              <li><span class="t-date">2021.04–2023.03</span> Dept. of Earth and Planetary Physics, Faculty of Science, UTokyo</li>
+              <li><span class="t-date">2023.04–2025.03</span> Master's Program, Earth and Planetary Science, UTokyo</li>
+              <li><span class="t-date">2025.04–present</span> Doctoral Program, Earth and Planetary Science, UTokyo</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="sub"><span class="lang-ja">フェローシップ</span><span class="lang-en">Fellowships</span></h3>
+            <ul class="timeline lang-ja">
+              <li><span class="t-date">2023.10–</span> 宇宙地球フロンティア国際卓越大学院(IGPEES)コース生</li>
+              <li><span class="t-date">2025.04–</span> JST次世代研究者挑戦的研究プログラム(SPRING)東京大学「SPRING GX」プロジェクト生</li>
+              <li><span class="t-date">2026.04–</span> 日本学術振興会特別研究員DC2</li>
+            </ul>
+            <ul class="timeline lang-en">
+              <li><span class="t-date">2023.10–</span> IGPEES (International Graduate Program for Excellence in Earth-Space Science) student</li>
+              <li><span class="t-date">2025.04–</span> JST SPRING — UTokyo "SPRING GX" project student</li>
+              <li><span class="t-date">2026.04–</span> Japan Society for the Promotion of Science (JSPS) Research Fellow (DC2)</li>
+            </ul>
           </div>
         </div>
-      </div>
-    
-        <div id="show_right_sidebar">
-            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+
+        <div class="card">
+          <h3 class="sub"><span class="lang-ja">連絡先</span><span class="lang-en">Contact</span></h3>
+          <dl class="contact-list">
+            <div>
+              <dt><span class="lang-ja">Email</span><span class="lang-en">Email</span></dt>
+              <dd><a class="email-link" data-user="kazumasa-e67" data-domain="eps.s.u-tokyo.ac.jp"><span class="email-text">kazumasa-e67 [at] eps.s.u-tokyo.ac.jp</span></a></dd>
+            </div>
+            <div>
+              <dt><span class="lang-ja">電話</span><span class="lang-en">Phone</span></dt>
+              <dd>03-5841-4298 <span class="muted">(<span class="lang-ja">内線</span><span class="lang-en">ext.</span> 24298)</span></dd>
+            </div>
+            <div>
+              <dt><span class="lang-ja">住所</span><span class="lang-en">Address</span></dt>
+              <dd>
+                <span class="lang-ja">〒113-0033 東京都文京区本郷7-3-1 理学部1号館820号室</span>
+                <span class="lang-en">Room 820, Faculty of Science Bldg. 1, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===== RESEARCH ===== -->
+      <section id="research" class="section">
+        <h2 class="section-title"><span class="lang-ja">研究テーマ</span><span class="lang-en">Research</span></h2>
+
+        <div class="prose lang-ja">
+          <p>大気科学分野における量子コンピュータの活用に関する研究を行っています。量子コンピュータは、従来のコンピュータ(古典コンピュータ)では解決が難しい問題を効率的に解決できる可能性があります。これは量子の性質を活用することで古典コンピュータでは表現しきれないほどのヒルベルト空間を扱うことが可能となるからです。大気科学分野は計算機の発展とともに成長してきました。大型のスーパーコンピュータを活用することで、より高解像であったり色々なプロセスを組み込んだシミュレーションが可能となってきています。大気科学分野における研究で、量子コンピュータを効果的に活用する方法はあるのでしょうか。(あるとしたらどのような方法でしょうか。)</p>
+          <p>量子コンピュータはその計算の速さが注目されることが多いですが、量子コンピュータを使えば直ちに計算が速くなるというわけではありません。エンコードやリードアウトの問題、非線形計算を直接的に行えないなどの制約に対処する必要があります。このような制約に対処しつつ、古典コンピュータにはない強みを活かした使い方を考える必要があります。</p>
+          <p>修士課程における研究では、2つの大気科学における問題に対する量子計算の適用を考えました。1つは <a href="https://link.intlpress.com/JDetail/1806265547543236610" target="_blank" rel="noopener">Khouider et al. (2010)</a> の stochastic multi-cloud model (SMCM) です。このモデルでは、GCMなどの格子サイズでは解像しきれない雲の変動に関して、確率的に計算を行います。この確率計算において量子計算を活用する量子アルゴリズムを構築し、従来の計算と同様の結果が得られることを確認しました(<a href="https://www.jstage.jst.go.jp/article/sola/21/0/21_2025-006/_article/-char/ja/" target="_blank" rel="noopener">Ueno and Miura, 2025</a>)。もう1つは Alfonso (2015) の雲粒衝突併合過程のモデルです。このモデルでは、雲粒の衝突併合による成長過程において、決定論的な雲粒分布の時間発展ではなく、分布のばらつきも考慮した計算を行います。金融計算における量子アルゴリズム(<a href="https://quantum-journal.org/papers/q-2024-10-23-1504/" target="_blank" rel="noopener">Wang and Kan, 2024</a>)を参考に量子アルゴリズムを構築し、計算量の見積もりを行いました。問題サイズの増加に対して、古典計算では指数的に計算量が増えてしまうところ、量子計算では2乗程度の伸びに抑えられることが明らかになりました。</p>
+          <p>博士課程における研究では、3次元放射の計算における量子計算アルゴリズムの開発や、テンソルネットワークを用いた大気の階層構造理解に関して研究を行っていくつもりです。</p>
         </div>
 
-        <div id="right_sidebar">
-            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
-            <div class="page_toc">
-                <ul>
-<li><a class="reference internal" href="#">Home</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#id1">お知らせ</a></li>
-</ul>
-
-            </div>
+        <div class="prose lang-en">
+          <p>I study the application of quantum computers to atmospheric science. Quantum computers have the potential to efficiently solve problems that are difficult for conventional (classical) computers. This is because leveraging quantum properties makes it possible to handle Hilbert spaces far larger than classical computers can represent. Atmospheric science has grown alongside advances in computing, and the use of large supercomputers has enabled simulations with higher resolution and more complex processes. The question is: are there effective ways to utilize quantum computers in atmospheric science research — and if so, what are they?</p>
+          <p>While quantum computers are often highlighted for their computational speed, using a quantum computer does not immediately make calculations faster. It is necessary to address constraints such as encoding and readout problems and the inability to directly perform nonlinear calculations. One must think about how to overcome these limitations while leveraging the unique strengths that classical computers lack.</p>
+          <p>In my master's research, I considered the application of quantum computing to two problems in atmospheric science. The first is the stochastic multi-cloud model (SMCM) of <a href="https://link.intlpress.com/JDetail/1806265547543236610" target="_blank" rel="noopener">Khouider et al. (2010)</a>. This model stochastically computes cloud variability that cannot be resolved at the grid scale of GCMs and similar models. I constructed a quantum algorithm that applies quantum computing to this stochastic calculation and confirmed that it reproduces results consistent with classical computation (<a href="https://www.jstage.jst.go.jp/article/sola/21/0/21_2025-006/_article/-char/ja/" target="_blank" rel="noopener">Ueno and Miura, 2025</a>). The second is the model of cloud droplet collision–coalescence by Alfonso (2015). Rather than computing a deterministic time evolution of the droplet size distribution, this model accounts for the spread of the distribution. Drawing on quantum algorithms developed for financial computation (<a href="https://quantum-journal.org/papers/q-2024-10-23-1504/" target="_blank" rel="noopener">Wang and Kan, 2024</a>), I constructed a quantum algorithm and estimated its computational complexity. It was shown that while classical computation requires exponentially increasing resources as the problem size grows, the quantum approach scales only quadratically.</p>
+          <p>In my doctoral research, I plan to work on developing quantum computing algorithms for three-dimensional radiative transfer calculations and on understanding the hierarchical structure of the atmosphere using tensor networks.</p>
         </div>
-    
 
-      <div class="clearer"></div>
-    </div>
-    <div class="button_nav_wrapper">
-        <div class="button_nav">
-            <div class="left">
-                
-            </div>
-
-            <div class="right">
-                
-                    <a href="files/about.html"><span>自己紹介</span><span class="icon">&gt;</span></a>
-                
-            </div>
+        <div class="keywords">
+          <span class="kw"><span class="lang-ja">量子コンピュータ</span><span class="lang-en">Quantum computing</span></span>
+          <span class="kw"><span class="lang-ja">大気科学</span><span class="lang-en">Atmospheric science</span></span>
+          <span class="kw"><span class="lang-ja">確率的雲モデル</span><span class="lang-en">Stochastic cloud models</span></span>
+          <span class="kw"><span class="lang-ja">雲微物理</span><span class="lang-en">Cloud microphysics</span></span>
+          <span class="kw"><span class="lang-ja">放射伝達</span><span class="lang-en">Radiative transfer</span></span>
+          <span class="kw"><span class="lang-ja">テンソルネットワーク</span><span class="lang-en">Tensor networks</span></span>
         </div>
-    </div>
+      </section>
 
+      <!-- ===== PUBLICATIONS ===== -->
+      <section id="publications" class="section">
+        <h2 class="section-title"><span class="lang-ja">論文</span><span class="lang-en">Publications</span></h2>
 
-    <div class="footer" role="contentinfo">
-    &#169; 著作権 2024, Kazumasa Ueno.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
-    </div>
+        <h3 class="sub"><span class="lang-ja">学術論文</span><span class="lang-en">Journal Articles</span></h3>
+        <ol class="pub-list">
+          <li class="pub featured">
+            <span class="pub-authors">Ueno, K., &amp; Miura, H. (2025):</span>
+            <span class="pub-title">Quantum Algorithm for a Stochastic Multicloud Model,</span>
+            <span class="pub-venue"><em>SOLA</em>, <strong>21</strong>, 43–50.</span>
+            <a class="pub-doi" href="https://doi.org/10.2151/sola.2025-006" target="_blank" rel="noopener">DOI: 10.2151/sola.2025-006</a>
+          </li>
+        </ol>
 
-<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
-  </body>
+        <h3 class="sub"><span class="lang-ja">プレプリント</span><span class="lang-en">Preprints</span></h3>
+        <ol class="pub-list">
+          <li class="pub">
+            <span class="pub-authors">Ueno, K., Kanno, K., &amp; Lee, Y. (2026):</span>
+            <span class="pub-title">A Demonstration of Quantum Circuit Implementation for Obstacle Flow Using Carleman-Linearized Lattice Boltzmann Method,</span>
+            <span class="pub-venue"><span class="lang-ja">arXiv プレプリント.</span><span class="lang-en">arXiv preprint.</span></span>
+            <a class="pub-doi" href="https://arxiv.org/abs/2605.28135" target="_blank" rel="noopener">arXiv:2605.28135</a>
+          </li>
+          <li class="pub">
+            <span class="pub-authors">Ueno, K., &amp; Miura, H. (2026):</span>
+            <span class="pub-title">Quantum algorithm for the collision-coalescence of cloud droplets,</span>
+            <span class="pub-venue"><span class="lang-ja">arXiv プレプリント.</span><span class="lang-en">arXiv preprint.</span></span>
+            <a class="pub-doi" href="https://arxiv.org/abs/2603.06353" target="_blank" rel="noopener">arXiv:2603.06353</a>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ===== LINKS ===== -->
+      <section id="links" class="section">
+        <h2 class="section-title"><span class="lang-ja">リンク</span><span class="lang-en">Links</span></h2>
+        <div class="link-grid">
+          <a class="link-card" href="https://www.u-tokyo.ac.jp/" target="_blank" rel="noopener">
+            <span class="lang-ja">東京大学</span><span class="lang-en">The University of Tokyo</span>
+          </a>
+          <a class="link-card" href="https://www.s.u-tokyo.ac.jp/" target="_blank" rel="noopener">
+            <span class="lang-ja">理学系研究科</span><span class="lang-en">Graduate School of Science</span>
+          </a>
+          <a class="link-card" href="https://www.eps.s.u-tokyo.ac.jp/" target="_blank" rel="noopener">
+            <span class="lang-ja">地球惑星科学専攻</span><span class="lang-en">Dept. of Earth and Planetary Science</span>
+          </a>
+          <a class="link-card" href="https://www-aos.eps.s.u-tokyo.ac.jp/" target="_blank" rel="noopener">
+            <span class="lang-ja">大気海洋科学講座</span><span class="lang-en">Atmosphere and Ocean Science Group</span>
+          </a>
+          <a class="link-card" href="https://www-aos.eps.s.u-tokyo.ac.jp/~miura/" target="_blank" rel="noopener">
+            <span class="lang-ja">三浦研究室</span><span class="lang-en">Miura Laboratory</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year">2025</span> Kazumasa Ueno</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
