@@ -307,6 +307,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   text-transform: uppercase;
   font-size: .85rem;
 }
+.card .sub ~ .sub { margin-top: 1.2rem; }
 
 /* cards */
 .card {
