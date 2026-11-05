@@ -2,13 +2,37 @@
    Kazumasa Ueno — site interactions
    - language toggle (ja / en) with persistence
    - light / dark theme toggle with persistence
-   - scroll-spy nav highlighting
+   - page titles and legacy section links
    - email obfuscation
    ============================================================ */
 (function () {
   "use strict";
 
   var root = document.documentElement;
+  var page = document.body.getAttribute("data-page") || "overview";
+  var PAGE_TITLES = {
+    overview: { ja: "Home", en: "Home" },
+    news: { ja: "Updates", en: "Updates" },
+    cv: { ja: "CV", en: "CV" },
+    publications: { ja: "論文・発表", en: "Publications & Presentations" }
+  };
+
+  /* ---------- Keep links from the former single-page site working ---------- */
+  if (page === "overview") {
+    var legacyPages = {
+      "#news": "news/#news",
+      "#publications": "publications/#publications"
+    };
+    var followLegacyLink = function () {
+      var path = legacyPages[window.location.hash];
+      if (!path) return;
+      var destination = new URL(path, window.location.href);
+      destination.search = window.location.search;
+      window.location.replace(destination.href);
+    };
+    followLegacyLink();
+    window.addEventListener("hashchange", followLegacyLink);
+  }
 
   /* ---------- Language ---------- */
   var META = {
@@ -26,13 +50,20 @@
     if (lang !== "ja" && lang !== "en") lang = "ja";
     root.setAttribute("data-lang", lang);
     root.setAttribute("lang", lang);
-    document.title = META[lang].title;
+    document.title = (PAGE_TITLES[page] || PAGE_TITLES.overview)[lang] + " | " + META[lang].title;
     var desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute("content", META[lang].desc);
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", document.title);
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", META[lang].desc);
     document.querySelectorAll(".lang-btn").forEach(function (btn) {
-      btn.classList.toggle("active", btn.getAttribute("data-set-lang") === lang);
+      var active = btn.getAttribute("data-set-lang") === lang;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
     });
     try { localStorage.setItem("lang", lang); } catch (e) {}
+    renderLatestNews();
   }
 
   var savedLang;
@@ -79,48 +110,51 @@
     if (textEl) textEl.textContent = addr;
   });
 
-  /* ---------- Scroll-spy nav ---------- */
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
-  var sections = navLinks
-    .map(function (link) { return document.querySelector(link.getAttribute("href")); })
-    .filter(Boolean);
-
-  if ("IntersectionObserver" in window && sections.length) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.getAttribute("id");
-          navLinks.forEach(function (link) {
-            link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-          });
-        }
-      });
-    }, { rootMargin: "-20% 0px -70% 0px", threshold: 0 });
-    sections.forEach(function (sec) { observer.observe(sec); });
+  /* ---------- Home: latest three entries from the news archive ---------- */
+  var latestNews = document.getElementById("latestNews");
+  var latestNewsStatus = document.getElementById("latestNewsStatus");
+  var newsEntries = [];
+  function renderLatestNews() {
+    if (!latestNews || !newsEntries) return;
+    var lang = root.getAttribute("data-lang");
+    var visibleEntries = newsEntries.filter(function (entry) {
+      return !entry.classList.contains(lang === "en" ? "lang-ja" : "lang-en");
+    });
+    var fragment = document.createDocumentFragment();
+    visibleEntries.slice(0, 3).forEach(function (entry) {
+      fragment.appendChild(document.importNode(entry, true));
+    });
+    latestNews.replaceChildren(fragment);
   }
-
-  /* ---------- News: show 3, expand for the rest ---------- */
-  var newsList = document.querySelector(".news-list");
-  var newsToggle = document.getElementById("newsToggle");
-  if (newsList && newsToggle) {
-    var NEWS_LIMIT = 3;
-    var extra = newsList.querySelectorAll("li").length - NEWS_LIMIT;
-    if (extra > 0) {
-      newsList.classList.add("js-collapsed");
-      newsToggle.hidden = false;
-      var jaL = newsToggle.querySelector(".lang-ja");
-      var enL = newsToggle.querySelector(".lang-en");
-      var updateNewsLabel = function (open) {
-        jaL.textContent = open ? "閉じる" : "もっと表示する（あと" + extra + "件）";
-        enL.textContent = open ? "Show less" : "Show " + extra + " more";
-      };
-      updateNewsLabel(false);
-      newsToggle.addEventListener("click", function () {
-        var open = newsList.classList.toggle("is-open");
-        newsToggle.setAttribute("aria-expanded", open ? "true" : "false");
-        updateNewsLabel(open);
-      });
-    }
+  function showNewsLoadError() {
+    if (latestNewsStatus) latestNewsStatus.hidden = false;
+  }
+  if (latestNews && typeof fetch === "function") {
+    var newsURL = new URL(latestNews.getAttribute("data-news-source"), window.location.href);
+    fetch(newsURL.href)
+      .then(function (response) {
+        if (!response.ok) throw new Error("News could not be loaded");
+        return response.text();
+      })
+      .then(function (html) {
+        var archive = new DOMParser().parseFromString(html, "text/html");
+        var entries = Array.prototype.slice.call(archive.querySelectorAll(".news-list > li"));
+        if (!entries.length) return;
+        entries.sort(function (a, b) {
+          return b.querySelector(".news-date").textContent.trim()
+            .localeCompare(a.querySelector(".news-date").textContent.trim());
+        });
+        entries.forEach(function (entry) {
+          entry.querySelectorAll("a[href]").forEach(function (link) {
+            link.setAttribute("href", new URL(link.getAttribute("href"), newsURL).href);
+          });
+        });
+        newsEntries = entries;
+        renderLatestNews();
+      })
+      .catch(showNewsLoadError);
+  } else if (latestNews) {
+    showNewsLoadError();
   }
 
   /* ---------- Footer year ---------- */

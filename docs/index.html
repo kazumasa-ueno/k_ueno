@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>上野和雅 | Kazumasa Ueno</title>
+  <title>Home | 上野和雅 | Kazumasa Ueno</title>
   <meta name="description" content="上野和雅 — 東京大学大学院 地球惑星科学専攻 博士課程。大気科学における量子コンピュータの活用を研究しています。" />
   <meta name="author" content="Kazumasa Ueno" />
   <meta name="color-scheme" content="light dark" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="上野和雅 | Kazumasa Ueno" />
+  <meta property="og:title" content="Home | 上野和雅 | Kazumasa Ueno" />
   <meta property="og:description" content="大気科学における量子コンピュータの活用に関する研究 — 東京大学 地球惑星科学専攻 博士課程" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,26 +19,21 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body data-page="overview">
+  <a class="skip-link" href="#main"><span class="lang-ja">本文へ移動</span><span class="lang-en">Skip to content</span></a>
 
   <div class="layout">
-    <!-- ===================== SIDEBAR ===================== -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-inner">
         <div class="profile">
           <img class="avatar" src="assets/img/cloud_avatar.jpg" alt="Kazumasa Ueno" width="128" height="128" />
-          <h1 class="name">
+          <p class="name">
             <span class="lang-ja">上野 和雅</span>
             <span class="lang-en">Kazumasa Ueno</span>
-          </h1>
+          </p>
           <p class="name-sub">
             <span class="lang-ja">Kazumasa Ueno</span>
             <span class="lang-en">上野 和雅</span>
-          </p>
-          <p class="tagline">
-            <span class="lang-ja">大気科学 × 量子コンピュータ</span>
-            <span class="lang-en">Atmospheric Science × Quantum Computing</span>
           </p>
           <p class="affil-mini">
             <span class="lang-ja">東京大学大学院 地球惑星科学専攻<br />三浦研究室 博士課程2年</span>
@@ -46,21 +41,18 @@
           </p>
         </div>
 
-        <nav class="nav" aria-label="Section navigation">
-          <a href="#news" class="nav-link">
-            <span class="lang-ja">お知らせ</span><span class="lang-en">News</span>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="./" class="nav-link active" aria-current="page">
+            <span class="lang-ja">Home</span><span class="lang-en">Home</span>
           </a>
-          <a href="#about" class="nav-link">
-            <span class="lang-ja">自己紹介</span><span class="lang-en">About</span>
+          <a href="news/" class="nav-link">
+            <span class="lang-ja">Updates</span><span class="lang-en">Updates</span>
           </a>
-          <a href="#research" class="nav-link">
-            <span class="lang-ja">研究テーマ</span><span class="lang-en">Research</span>
+          <a href="cv/" class="nav-link">
+            <span class="lang-ja">CV</span><span class="lang-en">CV</span>
           </a>
-          <a href="#publications" class="nav-link">
-            <span class="lang-ja">論文</span><span class="lang-en">Publications</span>
-          </a>
-          <a href="#links" class="nav-link">
-            <span class="lang-ja">リンク</span><span class="lang-en">Links</span>
+          <a href="publications/" class="nav-link">
+            <span class="lang-ja">論文・発表</span><span class="lang-en">Publications &amp; Presentations</span>
           </a>
         </nav>
 
@@ -100,68 +92,24 @@
       </div>
     </aside>
 
-    <!-- ===================== MAIN ===================== -->
     <main class="main" id="main">
-      <header class="lead">
-        <p class="lang-ja">
-          東京大学大学院 理学系研究科 地球惑星科学専攻の博士課程に在籍しています。
-          <strong>大気科学分野における量子コンピュータの活用</strong>をテーマに、
-          確率的な雲モデルや雲粒の衝突併合過程、放射伝達などへの量子アルゴリズムの応用を研究しています。
+      <!-- <header class="page-header">
+        <h1 class="page-title"><span class="lang-ja">Home</span><span class="lang-en">Home</span></h1>
+      </header> -->
+      <section id="latest-news" class="section" aria-labelledby="latest-news-title">
+        <h2 class="section-title" id="latest-news-title"><span class="lang-ja">Updates</span><span class="lang-en">Updates</span></h2>
+        <!-- Entries are loaded from news/index.html; edit Updates only there. -->
+        <ul class="news-list" id="latestNews" data-news-source="news/"></ul>
+        <p class="muted" id="latestNewsStatus" role="status" hidden>
+          <span class="lang-ja">Updatesを読み込めませんでした。下のリンクから一覧をご覧ください。</span>
+          <span class="lang-en">Updates could not be loaded. Use the link below to view all updates.</span>
         </p>
-        <p class="lang-en">
-          I am a doctoral student at the Department of Earth and Planetary Science,
-          The University of Tokyo. My research explores
-          <strong>the application of quantum computing to atmospheric science</strong>,
-          including stochastic cloud models, cloud droplet collision–coalescence, and radiative transfer.
-        </p>
-      </header>
-
-      <!-- ===== NEWS ===== -->
-      <section id="news" class="section">
-        <h2 class="section-title"><span class="lang-ja">お知らせ</span><span class="lang-en">News</span></h2>
-        <ul class="news-list">
-          <li>
-            <span class="news-date">2026.05.27</span>
-            <span class="news-body">
-              <span class="lang-ja">プレプリント「<a href="https://arxiv.org/abs/2605.28135" target="_blank" rel="noopener">A Demonstration of Quantum Circuit Implementation for Obstacle Flow Using Carleman-Linearized Lattice Boltzmann Method</a>」を arXiv に公開しました。</span>
-              <span class="lang-en">Preprint "<a href="https://arxiv.org/abs/2605.28135" target="_blank" rel="noopener">A Demonstration of Quantum Circuit Implementation for Obstacle Flow Using Carleman-Linearized Lattice Boltzmann Method</a>" posted on arXiv.</span>
-            </span>
-          </li>
-          <li>
-            <span class="news-date">2026.03.06</span>
-            <span class="news-body">
-              <span class="lang-ja">プレプリント「<a href="https://arxiv.org/abs/2603.06353" target="_blank" rel="noopener">Quantum algorithm for the collision-coalescence of cloud droplets</a>」を arXiv に公開しました。</span>
-              <span class="lang-en">Preprint "<a href="https://arxiv.org/abs/2603.06353" target="_blank" rel="noopener">Quantum algorithm for the collision-coalescence of cloud droplets</a>" posted on arXiv.</span>
-            </span>
-          </li>
-          <li>
-            <span class="news-date">2025.04.01</span>
-            <span class="news-body"><span class="lang-ja">博士課程に進学しました。</span><span class="lang-en">Updated the website.</span></span>
-          </li>
-          <li>
-            <span class="news-date">2025.01.29</span>
-            <span class="news-body">
-              <span class="lang-ja">論文「<a href="https://doi.org/10.2151/sola.2025-006" target="_blank" rel="noopener">Quantum Algorithm for a Stochastic Multicloud Model</a>」が 日本気象学会の論文誌 SOLA に掲載されました。</span>
-              <span class="lang-en">Paper "<a href="https://doi.org/10.2151/sola.2025-006" target="_blank" rel="noopener">Quantum Algorithm for a Stochastic Multicloud Model</a>" published in SOLA (Meteorological Society of Japan).</span>
-            </span>
-          </li>
-          <li>
-            <span class="news-date">2024.02.23</span>
-            <span class="news-body"><span class="lang-ja">ホームページを開設しました。</span><span class="lang-en">Launched the website.</span></span>
-          </li>
-        </ul>
-        <button type="button" class="show-more" id="newsToggle" aria-expanded="false" hidden>
-          <span class="lang-ja"></span><span class="lang-en"></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5 5.5 9 7 7.5l5 5 5-5L18.5 9z"/></svg>
-        </button>
+        <p><a href="news/"><span class="lang-ja">More</span><span class="lang-en">All updates</span></a></p>
       </section>
 
-      <!-- ===== ABOUT ===== -->
       <section id="about" class="section">
-        <h2 class="section-title"><span class="lang-ja">自己紹介</span><span class="lang-en">About</span></h2>
-
+        <h2 class="section-title"><span class="lang-ja">所属</span><span class="lang-en">Affiliation</span></h2>
         <div class="card">
-          <h3 class="sub"><span class="lang-ja">所属</span><span class="lang-en">Affiliation</span></h3>
           <p class="lang-ja">
             東京大学大学院 理学系研究科 地球惑星科学専攻<br />
             大気海洋科学講座 三浦裕亮研究室<br />
@@ -173,41 +121,41 @@
             <span class="badge">Doctoral 2nd year (D2)</span>
           </p>
         </div>
+      </section>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3 class="sub"><span class="lang-ja">経歴</span><span class="lang-en">Education / Career</span></h3>
-            <ul class="timeline range lang-ja">
-              <li><span class="t-date">2019.04–2021.03</span> 東京大学 教養学部 理科Ⅰ類</li>
-              <li><span class="t-date">2021.04–2023.03</span> 東京大学 理学部 地球惑星物理学科</li>
-              <li><span class="t-date">2023.04–2025.03</span> 東京大学大学院 理学系研究科 地球惑星科学専攻 修士課程</li>
-              <li><span class="t-date">2025.04–現在</span> 同 博士課程</li>
-            </ul>
-            <ul class="timeline range lang-en">
-              <li><span class="t-date">2019.04–2021.03</span> Faculty of Science I, College of Arts and Sciences, UTokyo</li>
-              <li><span class="t-date">2021.04–2023.03</span> Dept. of Earth and Planetary Physics, Faculty of Science, UTokyo</li>
-              <li><span class="t-date">2023.04–2025.03</span> Master's Program, Earth and Planetary Science, UTokyo</li>
-              <li><span class="t-date">2025.04–present</span> Doctoral Program, Earth and Planetary Science, UTokyo</li>
-            </ul>
-          </div>
+      <section id="research" class="section">
+        <h2 class="section-title"><span class="lang-ja">研究内容</span><span class="lang-en">Research</span></h2>
 
-          <div class="card">
-            <h3 class="sub"><span class="lang-ja">フェローシップ</span><span class="lang-en">Fellowships</span></h3>
-            <ul class="timeline lang-ja">
-              <li><span class="t-date">2023.10–</span> 宇宙地球フロンティア国際卓越大学院(IGPEES)コース生</li>
-              <li><span class="t-date">2025.04–</span> JST次世代研究者挑戦的研究プログラム(SPRING)東京大学「SPRING GX」プロジェクト生</li>
-              <li><span class="t-date">2026.04–</span> 日本学術振興会特別研究員DC2</li>
-            </ul>
-            <ul class="timeline lang-en">
-              <li><span class="t-date">2023.10–</span> IGPEES (International Graduate Program for Excellence in Earth-Space Science) student</li>
-              <li><span class="t-date">2025.04–</span> JST SPRING — UTokyo "SPRING GX" project student</li>
-              <li><span class="t-date">2026.04–</span> Japan Society for the Promotion of Science (JSPS) Research Fellow (DC2)</li>
-            </ul>
-          </div>
+        <div class="prose lang-ja">
+          <p>大気科学への量子計算の応用に取り組んでいます。</p>
+          <ul class="research-list">
+            <li><a href="https://link.springer.com/article/10.2151/sola.2025-006" target="_blank" rel="noopener">確率的雲モデル</a>：確率的マルチクラウドモデルを量子回路で表現し、古典計算と同様の結果が得られることを確認しました。</li>
+            <li><a href="https://doi.org/10.1103/ffxz-ttw7" target="_blank" rel="noopener">雲粒の衝突併合</a>：雲粒分布の時間発展を記述するマスター方程式に対する量子アルゴリズムを構築し、計算量を評価しました。</li>
+            <li>放射伝達：放射伝達方程式を解く量子アルゴリズムの開発と、必要な計算資源の見積もりに取り組んでいます。</li>
+          </ul>
         </div>
 
+        <div class="prose lang-en">
+          <p>I study quantum computing applications in atmospheric science.</p>
+          <ul class="research-list">
+            <li><a href="https://link.springer.com/article/10.2151/sola.2025-006" target="_blank" rel="noopener">Stochastic cloud models</a>: Implemented the stochastic multicloud model using quantum circuits and confirmed that its results are consistent with classical calculations.</li>
+            <li><a href="https://doi.org/10.1103/ffxz-ttw7" target="_blank" rel="noopener">Cloud droplet collision–coalescence</a>: Developed a quantum algorithm for the master equation governing the evolution of droplet distributions and evaluated its computational complexity.</li>
+            <li>Radiative transfer: Developing quantum algorithms for the radiative transfer equation and estimating their computational resource requirements.</li>
+          </ul>
+        </div>
+
+        <div class="keywords">
+          <span class="kw"><span class="lang-ja">量子コンピュータ</span><span class="lang-en">Quantum computing</span></span>
+          <span class="kw"><span class="lang-ja">大気科学</span><span class="lang-en">Atmospheric science</span></span>
+          <span class="kw"><span class="lang-ja">確率的雲モデル</span><span class="lang-en">Stochastic cloud models</span></span>
+          <span class="kw"><span class="lang-ja">雲微物理</span><span class="lang-en">Cloud microphysics</span></span>
+          <span class="kw"><span class="lang-ja">放射伝達</span><span class="lang-en">Radiative transfer</span></span>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2 class="section-title"><span class="lang-ja">連絡先</span><span class="lang-en">Contact</span></h2>
         <div class="card">
-          <h3 class="sub"><span class="lang-ja">連絡先</span><span class="lang-en">Contact</span></h3>
           <dl class="contact-list">
             <div>
               <dt><span class="lang-ja">Email</span><span class="lang-en">Email</span></dt>
@@ -228,66 +176,6 @@
         </div>
       </section>
 
-      <!-- ===== RESEARCH ===== -->
-      <section id="research" class="section">
-        <h2 class="section-title"><span class="lang-ja">研究テーマ</span><span class="lang-en">Research</span></h2>
-
-        <div class="prose lang-ja">
-          <p>大気科学分野における量子コンピュータの活用に関する研究を行っています。量子コンピュータは、従来のコンピュータ(古典コンピュータ)では解決が難しい問題を効率的に解決できる可能性があります。これは量子の性質を活用することで古典コンピュータでは表現しきれないほどのヒルベルト空間を扱うことが可能となるからです。大気科学分野は計算機の発展とともに成長してきました。大型のスーパーコンピュータを活用することで、より高解像であったり色々なプロセスを組み込んだシミュレーションが可能となってきています。大気科学分野における研究で、量子コンピュータを効果的に活用する方法はあるのでしょうか。(あるとしたらどのような方法でしょうか。)</p>
-          <p>量子コンピュータはその計算の速さが注目されることが多いですが、量子コンピュータを使えば直ちに計算が速くなるというわけではありません。エンコードやリードアウトの問題、非線形計算を直接的に行えないなどの制約に対処する必要があります。このような制約に対処しつつ、古典コンピュータにはない強みを活かした使い方を考える必要があります。</p>
-          <p>修士課程における研究では、2つの大気科学における問題に対する量子計算の適用を考えました。1つは <a href="https://link.intlpress.com/JDetail/1806265547543236610" target="_blank" rel="noopener">Khouider et al. (2010)</a> の stochastic multi-cloud model (SMCM) です。このモデルでは、GCMなどの格子サイズでは解像しきれない雲の変動に関して、確率的に計算を行います。この確率計算において量子計算を活用する量子アルゴリズムを構築し、従来の計算と同様の結果が得られることを確認しました(<a href="https://www.jstage.jst.go.jp/article/sola/21/0/21_2025-006/_article/-char/ja/" target="_blank" rel="noopener">Ueno and Miura, 2025</a>)。もう1つは Alfonso (2015) の雲粒衝突併合過程のモデルです。このモデルでは、雲粒の衝突併合による成長過程において、決定論的な雲粒分布の時間発展ではなく、分布のばらつきも考慮した計算を行います。金融計算における量子アルゴリズム(<a href="https://quantum-journal.org/papers/q-2024-10-23-1504/" target="_blank" rel="noopener">Wang and Kan, 2024</a>)を参考に量子アルゴリズムを構築し、計算量の見積もりを行いました。問題サイズの増加に対して、古典計算では指数的に計算量が増えてしまうところ、量子計算では2乗程度の伸びに抑えられることが明らかになりました。</p>
-          <p>博士課程における研究では、3次元放射の計算における量子計算アルゴリズムの開発や、テンソルネットワークを用いた大気の階層構造理解に関して研究を行っていくつもりです。</p>
-        </div>
-
-        <div class="prose lang-en">
-          <p>I study the application of quantum computers to atmospheric science. Quantum computers have the potential to efficiently solve problems that are difficult for conventional (classical) computers. This is because leveraging quantum properties makes it possible to handle Hilbert spaces far larger than classical computers can represent. Atmospheric science has grown alongside advances in computing, and the use of large supercomputers has enabled simulations with higher resolution and more complex processes. The question is: are there effective ways to utilize quantum computers in atmospheric science research — and if so, what are they?</p>
-          <p>While quantum computers are often highlighted for their computational speed, using a quantum computer does not immediately make calculations faster. It is necessary to address constraints such as encoding and readout problems and the inability to directly perform nonlinear calculations. One must think about how to overcome these limitations while leveraging the unique strengths that classical computers lack.</p>
-          <p>In my master's research, I considered the application of quantum computing to two problems in atmospheric science. The first is the stochastic multi-cloud model (SMCM) of <a href="https://link.intlpress.com/JDetail/1806265547543236610" target="_blank" rel="noopener">Khouider et al. (2010)</a>. This model stochastically computes cloud variability that cannot be resolved at the grid scale of GCMs and similar models. I constructed a quantum algorithm that applies quantum computing to this stochastic calculation and confirmed that it reproduces results consistent with classical computation (<a href="https://www.jstage.jst.go.jp/article/sola/21/0/21_2025-006/_article/-char/ja/" target="_blank" rel="noopener">Ueno and Miura, 2025</a>). The second is the model of cloud droplet collision–coalescence by Alfonso (2015). Rather than computing a deterministic time evolution of the droplet size distribution, this model accounts for the spread of the distribution. Drawing on quantum algorithms developed for financial computation (<a href="https://quantum-journal.org/papers/q-2024-10-23-1504/" target="_blank" rel="noopener">Wang and Kan, 2024</a>), I constructed a quantum algorithm and estimated its computational complexity. It was shown that while classical computation requires exponentially increasing resources as the problem size grows, the quantum approach scales only quadratically.</p>
-          <p>In my doctoral research, I plan to work on developing quantum computing algorithms for three-dimensional radiative transfer calculations and on understanding the hierarchical structure of the atmosphere using tensor networks.</p>
-        </div>
-
-        <div class="keywords">
-          <span class="kw"><span class="lang-ja">量子コンピュータ</span><span class="lang-en">Quantum computing</span></span>
-          <span class="kw"><span class="lang-ja">大気科学</span><span class="lang-en">Atmospheric science</span></span>
-          <span class="kw"><span class="lang-ja">確率的雲モデル</span><span class="lang-en">Stochastic cloud models</span></span>
-          <span class="kw"><span class="lang-ja">雲微物理</span><span class="lang-en">Cloud microphysics</span></span>
-          <span class="kw"><span class="lang-ja">放射伝達</span><span class="lang-en">Radiative transfer</span></span>
-          <span class="kw"><span class="lang-ja">テンソルネットワーク</span><span class="lang-en">Tensor networks</span></span>
-        </div>
-      </section>
-
-      <!-- ===== PUBLICATIONS ===== -->
-      <section id="publications" class="section">
-        <h2 class="section-title"><span class="lang-ja">論文</span><span class="lang-en">Publications</span></h2>
-
-        <h3 class="sub"><span class="lang-ja">学術論文</span><span class="lang-en">Journal Articles</span></h3>
-        <ol class="pub-list">
-          <li class="pub featured">
-            <span class="pub-authors">Ueno, K., &amp; Miura, H. (2025):</span>
-            <span class="pub-title">Quantum Algorithm for a Stochastic Multicloud Model,</span>
-            <span class="pub-venue"><em>SOLA</em>, <strong>21</strong>, 43–50.</span>
-            <a class="pub-doi" href="https://doi.org/10.2151/sola.2025-006" target="_blank" rel="noopener">DOI: 10.2151/sola.2025-006</a>
-          </li>
-        </ol>
-
-        <h3 class="sub"><span class="lang-ja">プレプリント</span><span class="lang-en">Preprints</span></h3>
-        <ol class="pub-list">
-          <li class="pub">
-            <span class="pub-authors">Ueno, K., Kanno, K., &amp; Lee, Y. (2026):</span>
-            <span class="pub-title">A Demonstration of Quantum Circuit Implementation for Obstacle Flow Using Carleman-Linearized Lattice Boltzmann Method,</span>
-            <span class="pub-venue"><span class="lang-ja">arXiv プレプリント.</span><span class="lang-en">arXiv preprint.</span></span>
-            <a class="pub-doi" href="https://arxiv.org/abs/2605.28135" target="_blank" rel="noopener">arXiv:2605.28135</a>
-          </li>
-          <li class="pub">
-            <span class="pub-authors">Ueno, K., &amp; Miura, H. (2026):</span>
-            <span class="pub-title">Quantum algorithm for the collision-coalescence of cloud droplets,</span>
-            <span class="pub-venue"><span class="lang-ja">arXiv プレプリント.</span><span class="lang-en">arXiv preprint.</span></span>
-            <a class="pub-doi" href="https://arxiv.org/abs/2603.06353" target="_blank" rel="noopener">arXiv:2603.06353</a>
-          </li>
-        </ol>
-      </section>
-
-      <!-- ===== LINKS ===== -->
       <section id="links" class="section">
         <h2 class="section-title"><span class="lang-ja">リンク</span><span class="lang-en">Links</span></h2>
         <div class="link-grid">
